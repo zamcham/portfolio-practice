@@ -10,7 +10,7 @@ div {
 }
 
 h1,
-h2{
+h2 {
   font-size: 40px;
   font-weight: 700;
   color: #172b4d;
@@ -41,15 +41,15 @@ header {
 }
 
 .headline {
-    text-align: center;
-    background-image: url("./icons/header-mobile-bg.png");
-    background-size: 100%;
-    padding: 64px 24px;
-    margin: auto;
-    display: flex;
-    gap: 58px;
-    flex-direction: column;
-    justify-content: center;
+  text-align: center;
+  background-image: url("./icons/header-mobile-bg.png");
+  background-size: 100%;
+  padding: 64px 24px;
+  margin: auto;
+  display: flex;
+  gap: 58px;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container {
