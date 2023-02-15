@@ -1,10 +1,10 @@
 * {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 div {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
@@ -13,48 +13,46 @@ h1 {
 }
 
 p {
-    font-size: 20px;
-    line-height: 28px;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 #toolbartext {
-    font-size: 20px;
-    font-weight: 600;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 #menuicon{
-    max-width: 20px;
-    object-fit: contain;
+  max-width: 20px;
+  object-fit: contain;
 }
 
 
 .toolbar {
-    height: 48px;
-    margin: 0 15px;
-    justify-content: space-between;
+  height: 48px;
+  margin: 0 15px;
+  justify-content: space-between;
 }
 
 .headline {
-    text-align: center;
-    background-image: url("./icons/header-mobile-bg.png");
-    background-size: cover;
-    padding: 64px 24px;
-    position: absolute;
-    flex-direction: column;
+  text-align: center;
+  background-image: url("./icons/header-mobile-bg.png");
+  background-size: cover;
+  padding: 64px 24px;
+  position: absolute;
+  flex-direction: column;
 }
 
 .container {
-    margin: auto;
+  margin: auto;
 }
 
 #highlight {
-    color: #36B37E;
+  color: #36B37E;
 }
 
 .socialmedia {
-    max-width: 35px;
-    max-height: 35px;
-    margin: 15px;
+  max-width: 35px;
+  max-height: 35px;
+  margin: 15px;
 }
-
-
