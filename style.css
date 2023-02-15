@@ -22,11 +22,10 @@ p {
   font-weight: 600;
 }
 
-#menuicon{
+#menuicon {
   max-width: 20px;
   object-fit: contain;
 }
-
 
 .toolbar {
   height: 48px;
@@ -48,7 +47,7 @@ p {
 }
 
 #highlight {
-  color: #36B37E;
+  color: #36B37e;
 }
 
 .socialmedia {
