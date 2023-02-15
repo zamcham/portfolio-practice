@@ -1,1 +1,60 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+p {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+#toolbartext {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#menuicon{
+    max-width: 20px;
+    object-fit: contain;
+}
+
+
+.toolbar {
+    height: 48px;
+    margin: 0 15px;
+    justify-content: space-between;
+}
+
+.headline {
+    text-align: center;
+    background-image: url("./icons/header-mobile-bg.png");
+    background-size: cover;
+    padding: 64px 24px;
+    position: absolute;
+    flex-direction: column;
+}
+
+.container {
+    margin: auto;
+}
+
+#highlight {
+    color: #36B37E;
+}
+
+.socialmedia {
+    max-width: 35px;
+    max-height: 35px;
+    margin: 15px;
+}
+
 
