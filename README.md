@@ -60,8 +60,6 @@ Welcome to my portfolio project, where I showcase my skills and expertise! Here,
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **Mobile Responsive**
 - **Modern and fun look**
 
