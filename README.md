@@ -69,7 +69,7 @@ Welcome to my portfolio project, where I showcase my skills and expertise! Here,
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/zam-cham/portfolio/main/index.html)
+- [Live Demo Link](https://zam-cham.github.io/portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
