@@ -4,11 +4,6 @@
   padding: 0;
 }
 
-div {
-  display: flex;
-  justify-content: center;
-}
-
 h1,
 h2 {
   font-size: 40px;
@@ -42,8 +37,10 @@ header {
 
 .headline {
   text-align: center;
+  max-height: 725px;
   background-image: url("./icons/header-mobile-bg.png");
   background-size: 100%;
+  background-repeat: no-repeat;
   padding: 64px 24px;
   margin: auto;
   display: flex;
@@ -54,6 +51,9 @@ header {
 
 .container {
   margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .container ul {
@@ -76,4 +76,154 @@ header {
 #welcometext {
   display: block;
   gap: 0;
+}
+
+.works {
+  display: grid;
+}
+
+.maincard {
+  height: 474px;
+  margin: 25px;
+  justify-content: flex-end;
+}
+
+.maincard,
+.aboutcard {
+  width: 327px;
+  background-color: #ebf0ee;
+  border-style: solid;
+  border-color: #d0d9d4;
+  border-radius: 8px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutcard {
+  height: 352px;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.aboutcard > * {
+  margin: 0;
+}
+
+.aboutcard .tags {
+  justify-content: center;
+}
+
+.aboutcard .tag {
+  background-color: white;
+  margin: 5px;
+  padding: 12px;
+}
+
+.aboutcard .cardinfo {
+    margin: 16px 5px 0;
+}
+
+.aboutme {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.card {
+    max-height: 50%;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.cardinfo {
+  margin: 16px 5px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.tag {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3a4a42;
+    list-style: none;
+    background-color: #Ebf0ee;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.button {
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    height: 48px;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #36b37f;
+    margin-top: 24px;
+}
+
+.button:hover {
+  box-shadow: 0px 5px 10px rgba(54, 179, 127, 0.8);
+}
+
+.button:active {
+  background-color: #008552;
+  box-shadow: none;
+}
+
+.about {
+    min-height: 380px;
+    background-image: url(./Images/about-me.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.about div {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.about p {
+  color: #42526e;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.aboutcardscontainer {
+  display: grid;
+  margin-top: 60px;
+}
+
+.aboutcardscontainer h3 {
+  color: #344563;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.aboutcardscontainer .tag {
+  color: #36b37e;
+}
+
+.aboutcardscontainer img {
+  margin-bottom: 18px;
+}
+
+hr.roundeddivider {
+    border-top: 4px solid #36b37e;
+    border-radius: 5px;
+    width: 50px;
+    margin: 24px auto;
 }
