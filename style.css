@@ -4,7 +4,6 @@
   padding: 0;
 }
 
-
 h1,
 h2 {
   font-size: 40px;
@@ -232,14 +231,14 @@ hr.roundeddivider {
   padding: 64px 24px 26px;
   background-image: url(./Images/contactformbg.svg);
   background-repeat: no-repeat;
-  background-position: bottom 0px right 0px;
+  background-position: bottom 0 right 0;
 }
 
 .contact .container {
   width: 100%;
 }
 
-form{
+form {
   width: 100%;
   margin: auto;
 }
@@ -252,8 +251,6 @@ input,
   margin: 20px auto;
   border-radius: 4px;
 }
-
-
 
 input:focus,
 textarea:focus {
