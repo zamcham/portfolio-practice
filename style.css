@@ -62,20 +62,18 @@ header {
   list-style: none;
 }
 
+#welcometext {
+  display: block;
+}
+
 #highlight {
   color: #36b37e;
-  gap: 0;
 }
 
 .socialmediaicons {
   max-width: 35px;
   max-height: 35px;
   margin: 0 8px;
-}
-
-#welcometext {
-  display: block;
-  gap: 0;
 }
 
 .works {
