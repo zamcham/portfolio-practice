@@ -241,14 +241,16 @@
         <div class="container">
             <h2>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
         </div>
-        <div class="container">
+        <div class="container" id="contactform">
             <form>
                 <input type="text" id="name" name="name" placeholder="Full name"><br>
                 <input type="email" id="email" name="email" placeholder="Email address"><br>
-                <input type="text" id="comments" name="comments" placeholder="Enter text here"><br>
-                <input type="submit" value="Get in touch">
+                <textarea id="comments" name="comment" rows="9" placeholder="Enter text here"></textarea><br>               <input class="button" type="submit" value="Get in touch">
+
             </form>
         </div>
+    </section>
+    <footer>
         <div class="container">
             <ul>
                 <li class="socialmediaicons">
@@ -269,8 +271,8 @@
             </ul>
         </div>
         <div class="container">
-            <p>cristian@zamcham.com</p>
+            <p id="contactemail">cristian@zamcham.com</p>
         </div>
-    </section>
+    </footer>
 </body>
 </html>
