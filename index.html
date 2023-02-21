@@ -242,11 +242,11 @@
             <h2>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
         </div>
         <div class="container" id="contactform">
-            <form>
-                <input type="text" id="name" name="name" placeholder="Full name"><br>
-                <input type="email" id="email" name="email" placeholder="Email address"><br>
-                <textarea id="comments" name="comment" rows="9" placeholder="Enter text here"></textarea><br>               <input class="button" type="submit" value="Get in touch">
-
+            <form action="https://formspree.io/f/xnqydbrv" method="POST">
+                <input type="text" id="name" name="name" placeholder="Full name" maxlength="30" required><br>
+                <input type="email" id="email" name="email" placeholder="Email address" required><br>
+                <textarea id="comments" name="comment" rows="9" placeholder="Enter text here" maxlength="500" required></textarea><br>               
+                <input class="button" type="submit" value="Get in touch">
             </form>
         </div>
     </section>
