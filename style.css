@@ -28,6 +28,10 @@ p {
   object-fit: contain;
 }
 
+.menutabs {
+  display: none;
+}
+
 header {
   height: 48px;
   margin: 15px;
@@ -78,9 +82,14 @@ header {
   margin: 0 8px;
 }
 
-.works {
+.works,
+.aboutcardscontainer {
+  max-width: 1029px;
   display: grid;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
+  justify-items: center;
+  margin: auto;
+  column-gap: 24px;
 }
 
 .workscard {
@@ -151,11 +160,9 @@ header {
   margin: 16px 5px 0;
 }
 
-.aboutme,
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.aboutme {
+  margin: auto;
+  justify-content: space-evenly;
 }
 
 .button {
@@ -184,6 +191,7 @@ header {
   padding: 0 24px;
   display: flex;
   flex-direction: column;
+  margin: 34px auto;
 }
 
 .about div {
@@ -195,11 +203,6 @@ header {
   color: #42526e;
   font-size: 20px;
   font-weight: 400;
-}
-
-.aboutcardscontainer {
-  display: grid;
-  margin: 60px auto 60px;
 }
 
 .aboutcardscontainer h3 {
@@ -228,10 +231,14 @@ hr.roundeddivider {
   background-image: url(./Images/contactformbg.svg);
   background-repeat: no-repeat;
   background-position: bottom 0 right 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
 }
 
 .contact .container {
-  width: 100%;
+  width: 90%;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 form {
@@ -264,17 +271,35 @@ textarea:focus {
   margin: 17px auto;
 }
 
-@media (min-width: 450px)
+@media (min-width: 768px)
 {
+  body {
+    background-image: url(./Images/desktopheaderbg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  .menutabs {
+    display: flex;
+  }
+
+  .menutabs li {
+    list-style: none;
+    padding: 10px 12px;
+    margin: 16px 20px;
+  }
+
+  .menutabs a {
+    color: #344563;
+    text-decoration: none;
+  }
 
   header {
     height: 72px;
-  }
-
-  h1,
-  h2 {
-  font-size: 48px;
-  font-weight: 800;
   }
 
   p {
@@ -283,7 +308,7 @@ textarea:focus {
   }
 
   .headline {
-    background: url(./Images/desktopheaderbg.svg) no-repeat center center / cover;
+    background: none;
   }
 
   .headline .container {
@@ -294,4 +319,68 @@ textarea:focus {
     max-width: 920px;
     margin: auto;
   }
+
+  .workscontainer {
+    margin: 100px auto;
+  }
+
+  hr.roundeddivider,
+  #contactemail,
+  .logo,
+  #menuicon { 
+    display: none;
+  }
+
+  .aboutme {
+    background-image: url(./Images/desktopaboutbg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+
+  }
+
+  .about{
+    max-width: 920px;
+    background-image: none;
+    margin: 60px auto 40px;
+  }
+
+  .contactsection {
+    background: url(./Images/contactdesktopbg.svg) no-repeat 0 center / cover;
+  }
+
+  .contactsection Input,
+  textarea,
+  #formbutton {
+    float: left;
+  }
+
+  .contactsection Input,
+  #comments {
+    width: 100%;
+  }
+
+
+  .contact {
+    background: none;
+    max-width: 1029px;
+    padding: 64px 24px;
+    margin: auto;
+    grid-template-columns: 1.2fr 1.8fr;
+    column-gap: 15px;
+  }
+
+  #contactformtext {
+    font-size: 25px;
+    text-align: justify;
+  }
+  
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 71px;
+    border-top: 1px solid #dfe1e6;
+  }
+
 }
