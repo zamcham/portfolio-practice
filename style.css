@@ -323,7 +323,7 @@ textarea:focus {
   hr.roundeddivider,
   #contactemail,
   .logo,
-  #menuicon { 
+  #menuicon {
     display: none;
   }
 
@@ -332,7 +332,6 @@ textarea:focus {
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center top;
-
   }
 
   .about {
@@ -377,5 +376,4 @@ textarea:focus {
     height: 71px;
     border-top: 1px solid #dfe1e6;
   }
-
 }
