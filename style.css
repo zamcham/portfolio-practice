@@ -52,14 +52,14 @@ header {
   gap: 58px;
 }
 
-.headlinecontent .container {
-  margin: 28px auto;
-}
-
 .container {
   text-align: center;
   display: flex;
   justify-content: center;
+}
+
+.headlinecontent .container {
+  margin: 28px auto;
 }
 
 .container ul {
@@ -126,16 +126,6 @@ header {
   margin: 0;
 }
 
-.aboutcard .tags {
-  justify-content: center;
-}
-
-.aboutcard .tag {
-  background-color: white;
-  margin: 5px;
-  padding: 12px;
-}
-
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -150,6 +140,16 @@ header {
   background-color: #ebf0ee;
   padding: 8px 12px;
   border-radius: 5px;
+}
+
+.aboutcard .tags {
+  justify-content: center;
+}
+
+.aboutcard .tag {
+  background-color: white;
+  margin: 5px;
+  padding: 12px;
 }
 
 .cardinfo {
@@ -271,8 +271,7 @@ textarea:focus {
   margin: 17px auto;
 }
 
-@media (min-width: 768px)
-{
+@media (min-width: 768px) {
   body {
     background-image: url(./Images/desktopheaderbg.svg);
     background-repeat: no-repeat;
@@ -281,6 +280,7 @@ textarea:focus {
 
   header {
     justify-content: center;
+    height: 72px;
   }
 
   .menutabs {
@@ -296,10 +296,6 @@ textarea:focus {
   .menutabs a {
     color: #344563;
     text-decoration: none;
-  }
-
-  header {
-    height: 72px;
   }
 
   p {
@@ -339,7 +335,7 @@ textarea:focus {
 
   }
 
-  .about{
+  .about {
     max-width: 920px;
     background-image: none;
     margin: 60px auto 40px;
@@ -349,17 +345,16 @@ textarea:focus {
     background: url(./Images/contactdesktopbg.svg) no-repeat 0 center / cover;
   }
 
-  .contactsection Input,
+  .contactsection input,
   textarea,
   #formbutton {
     float: left;
   }
 
-  .contactsection Input,
+  .contactsection input,
   #comments {
     width: 100%;
   }
-
 
   .contact {
     background: none;
