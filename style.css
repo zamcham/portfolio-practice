@@ -4,9 +4,13 @@
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 h1,
 h2 {
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 700;
   color: #172b4d;
 }
@@ -251,7 +255,7 @@ input,
   width: 85%;
   padding: 15px 16px;
   border: 1px solid #d0d9d4;
-  margin: 20px auto;
+  margin: 12px auto;
   border-radius: 4px;
 }
 
@@ -271,6 +275,7 @@ textarea:focus {
   margin: 17px auto;
 }
 
+
 @media (min-width: 768px) {
   body {
     background-image: url(./Images/desktopheaderbg.svg);
@@ -284,6 +289,8 @@ textarea:focus {
   }
 
   .menutabs {
+    font-size: 1.5rem;
+    font-weight: 600;
     display: flex;
   }
 
@@ -299,12 +306,14 @@ textarea:focus {
   }
 
   p {
+    font-size: 2rem;
     font-weight: 400;
     line-height: 32px;
   }
 
   .headline {
     background: none;
+    margin: 0 auto 5rem;
   }
 
   .headline .container {
@@ -312,7 +321,7 @@ textarea:focus {
   }
 
   .headlinecontent {
-    max-width: 920px;
+    max-width: 60%;
     margin: auto;
   }
 
@@ -342,6 +351,7 @@ textarea:focus {
 
   .contactsection {
     background: url(./Images/contactdesktopbg.svg) no-repeat 0 center / cover;
+    margin: 100px auto 0;
   }
 
   .contactsection input,
@@ -365,7 +375,7 @@ textarea:focus {
   }
 
   #contactformtext {
-    font-size: 25px;
+    font-size: 2.5rem;
     text-align: justify;
   }
 
@@ -375,5 +385,19 @@ textarea:focus {
     justify-content: center;
     height: 71px;
     border-top: 1px solid #dfe1e6;
+  }
+}
+
+@media (min-width: 1000px) { 
+  .headline {
+    background: none;
+    margin: 0 auto 30rem;
+  }
+}
+
+@media (min-width: 1300px) { 
+  .headline {
+    background: none;
+    margin: 0 auto 40rem;
   }
 }
