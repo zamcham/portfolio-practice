@@ -275,7 +275,6 @@ textarea:focus {
   margin: 17px auto;
 }
 
-
 @media (min-width: 768px) {
   body {
     background-image: url(./Images/desktopheaderbg.svg);
@@ -388,14 +387,14 @@ textarea:focus {
   }
 }
 
-@media (min-width: 1000px) { 
+@media (min-width: 1000px) {
   .headline {
     background: none;
     margin: 0 auto 30rem;
   }
 }
 
-@media (min-width: 1300px) { 
+@media (min-width: 1300px) {
   .headline {
     background: none;
     margin: 0 auto 40rem;
