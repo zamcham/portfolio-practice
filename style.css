@@ -101,6 +101,16 @@ header {
   column-gap: 24px;
 }
 
+.tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3a4a42;
+  list-style: none;
+  background-color: #ebf0ee;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
 .works .tag {
   padding: 8px;
 }
@@ -143,16 +153,6 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-
-.tag {
-  font-size: 12px;
-  font-weight: 600;
-  color: #3a4a42;
-  list-style: none;
-  background-color: #ebf0ee;
-  padding: 8px 12px;
-  border-radius: 5px;
 }
 
 .aboutcard .tags {
@@ -311,7 +311,7 @@ textarea:focus {
     margin: 16px 20px;
   }
 
-  .menutabs li:after{
+  .menutabs li::after{
     content: "";
     position: absolute;
     background-color: #008552;
@@ -323,7 +323,7 @@ textarea:focus {
     transition: 0.3s;
   }
 
-  .menutabs li:hover:after{
+  .menutabs li:hover::after{
     width: 50%;
   }
 
