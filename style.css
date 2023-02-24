@@ -96,6 +96,10 @@ header {
   column-gap: 24px;
 }
 
+.works .tag {
+  padding: 8px;
+}
+
 .workscard {
   height: 474px;
   margin: 25px;
