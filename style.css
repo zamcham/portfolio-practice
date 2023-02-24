@@ -194,7 +194,7 @@ header {
 
 .button:hover {
   box-shadow: 0 5px 10px rgba(54, 179, 127, 0.8);
-  transform:scale(1.1,1.1);
+  transform: scale(1.1, 1.1);
 }
 
 .button:active {
@@ -311,7 +311,7 @@ textarea:focus {
     margin: 16px 20px;
   }
 
-  .menutabs li::after{
+  .menutabs li::after {
     content: "";
     position: absolute;
     background-color: #008552;
@@ -323,7 +323,7 @@ textarea:focus {
     transition: 0.3s;
   }
 
-  .menutabs li:hover::after{
+  .menutabs li:hover::after {
     width: 50%;
   }
 
@@ -357,13 +357,13 @@ textarea:focus {
     margin: 100px auto;
   }
 
-  .works .tag{
+  .works .tag {
     transition: 0.5s;
   }
 
   .works .tag:hover {
     color: #182a4d;
-    transform:scale(1.15,1.15);
+    transform: scale(1.15, 1.15);
     background-color: #c5e9da;
     cursor: pointer;
   }
