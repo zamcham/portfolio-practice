@@ -357,6 +357,17 @@ textarea:focus {
     margin: 100px auto;
   }
 
+  .works .tag{
+    transition: 0.5s;
+  }
+
+  .works .tag:hover {
+    color: #182a4d;
+    transform:scale(1.15,1.15);
+    background-color: #c5e9da;
+    cursor: pointer;
+  }
+
   hr.roundeddivider,
   #contactemail,
   .logo,
