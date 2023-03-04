@@ -35,7 +35,7 @@ p {
   display: none;
 }
 
-.menu-links ul{
+.menu-links ul {
   flex-direction: column;
   width: 100%;
 }
@@ -44,7 +44,7 @@ p {
   width: 100%;
   text-align: center;
   list-style: none;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .menu-links a {
@@ -76,7 +76,7 @@ nav {
 
 .toggle-button {
   position: absolute;
-  top: .75rem;
+  top: 0.75rem;
   right: 1rem;
   display: flex;
   flex-direction: column;
@@ -340,7 +340,6 @@ textarea:focus {
 
   .navbar {
     flex-direction: row;
-    align-items: flex-start;
     justify-content: space-between;
     align-items: center;
   }
