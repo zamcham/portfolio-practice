@@ -25,7 +25,37 @@ p {
   line-height: 28px;
 }
 
-.logo {
+.navbar {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu-links {
+  width: 100%;
+  display: none;
+}
+
+.menu-links ul {
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-links li {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  padding: 0.5rem 1rem;
+}
+
+.menu-links a {
+  text-decoration: none;
+}
+
+.menu-links.active {
+  display: flex;
+}
+
+.branding {
   font-size: 20px;
   font-weight: 600;
   color: #28352f;
@@ -37,15 +67,29 @@ p {
   object-fit: contain;
 }
 
-.menutabs {
-  display: none;
-}
-
-header {
+nav {
   height: 48px;
   margin: 15px;
   display: flex;
   justify-content: space-between;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
 }
 
 .headline {
@@ -294,9 +338,23 @@ textarea:focus {
     background-size: contain;
   }
 
-  header {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+
+  .menu-links {
+    display: flex;
+  }
+
+  .menu-links ul {
+    flex-direction: row;
     justify-content: center;
-    height: 72px;
   }
 
   .menutabs {
@@ -370,7 +428,7 @@ textarea:focus {
 
   hr.roundeddivider,
   #contactemail,
-  .logo,
+  .branding,
   #menuicon {
     display: none;
   }
