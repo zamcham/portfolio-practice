@@ -52,8 +52,19 @@ p {
 }
 
 .menu-links.active {
+  position: absolute;
+  left: 0;
   display: flex;
-}
+  font-size: 3.2rem;
+  font-weight: 600;
+  background-color: white;
+  min-height: 85vh;
+  width: 100%;
+  z-index: 10;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+} 
+
 
 .branding {
   font-size: 20px;
