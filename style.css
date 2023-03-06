@@ -64,17 +64,17 @@ p {
   z-index: 10;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-} 
+}
 
-.menu-links.active a{
+.menu-links.active a {
   text-decoration: none;
   color: #3a4a42;
-} 
+}
 
-.menu-links.active li{
+.menu-links.active li {
   text-align: left;
   margin: 2rem 1rem;
-} 
+}
 
 .dim-background.active {
   position: absolute;
