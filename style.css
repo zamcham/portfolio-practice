@@ -111,6 +111,7 @@ nav {
   justify-content: space-between;
   width: 30px;
   height: 21px;
+  z-index: 11;
 }
 
 .toggle-button .bar {
