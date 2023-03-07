@@ -18,7 +18,7 @@ exitMobileButton.addEventListener('click', () => {
   exitMobileButton.classList.toggle('active');
 });
 
-for (var i = 0; i < menuTabs.length; i++) {
+for (let i = 0; i < menuTabs.length; i+=1) {
   menuTabs[i].addEventListener('click', () => {
     navBarLinks.classList.toggle('active');
     dimBackground.classList.toggle('active');
