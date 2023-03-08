@@ -93,7 +93,6 @@ const modalPopUp = document.getElementsByClassName('modalcontainer')[0];
 const overlayBg = document.getElementById('overlay');
 const liveL = document.getElementById('see-live');
 const sourceL = document.getElementById('see-source');
-const bgImage = document.getElementsByClassName('modal-featured-image')[0];
 let currentScrollPosition = window.scrollY;
 
 function ShowModal(index) {
@@ -147,5 +146,5 @@ for (let i = 0; i < projectsList.length; i += 1) {
 function HideModal() { // eslint-disable-line no-unused-vars
   modalPopUp.classList.toggle('active');
   overlayBg.classList.toggle('active');
-  scrollTo(0, currentScrollPosition);
+  window.scrollTo(0, currentScrollPosition);
 }
