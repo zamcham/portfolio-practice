@@ -11,7 +11,7 @@ toggleButton.addEventListener('click', () => {
   exitMobileButton.classList.toggle('active');
 });
 
-//if it's activated
+// if it's activated
 exitMobileButton.addEventListener('click', () => {
   navBarLinks.classList.toggle('active');
   dimBackground.classList.toggle('active');
@@ -29,8 +29,8 @@ for (let i = 0; i < menuTabs.length; i += 1) {
   });
 }
 
-//#region projects data
-let projectsList = [
+// #region projects data
+const projectsList = [
   {
     name: 'My First Project in List',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -38,7 +38,7 @@ let projectsList = [
     feturedImageMobile: 'mobilepeojectpreview.jpg',
     feauturedImageDesktop: 'desktopSnapshot.svg',
     livelink: 'https://www.google.com/',
-    sourcelink: '#'
+    sourcelink: '#',
   },
   {
     name: 'My Second Project in List',
@@ -47,7 +47,7 @@ let projectsList = [
     feturedImageMobile: 'cardplaceholder.png',
     feauturedImageDesktop: 'cardplaceholder.png',
     livelink: '#',
-    sourcelink: '#'
+    sourcelink: '#',
   },
   {
     name: 'My Third Project in List',
@@ -56,7 +56,7 @@ let projectsList = [
     feturedImageMobile: 'cardplaceholder.png',
     feauturedImageDesktop: 'cardplaceholder.png',
     livelink: '#',
-    sourcelink: '#'
+    sourcelink: '#',
   },
   {
     name: 'My Fourth Project in List',
@@ -65,7 +65,7 @@ let projectsList = [
     feturedImageMobile: 'cardplaceholder.png',
     feauturedImageDesktop: 'cardplaceholder.png',
     livelink: '#',
-    sourcelink: '#'
+    sourcelink: '#',
   },
   {
     name: 'My Fifth Project in List',
@@ -74,7 +74,7 @@ let projectsList = [
     feturedImageMobile: 'cardplaceholder.png',
     feauturedImageDesktop: 'cardplaceholder.png',
     livelink: '#',
-    sourcelink: '#'
+    sourcelink: '#',
   },
   {
     name: 'My Sixth Project in List',
@@ -83,24 +83,24 @@ let projectsList = [
     feturedImageMobile: 'cardplaceholder.png',
     feauturedImageDesktop: 'cardplaceholder.png',
     livelink: '#',
-    sourcelink: '#'
+    sourcelink: '#',
   },
-]
-//#endregion
+];
+// #endregion
 
 // Get the project card template from the DOM
-let projectCardTemplate = document.getElementById('cardtemplate');
+const projectCardTemplate = document.getElementById('cardtemplate');
 
 // Get the container where the project cards will be inserted
-let projectsContainer = document.querySelector('.works');
+const projectsContainer = document.querySelector('.works');
 
 // Loop through the projectsList array and generate the HTML for each project
 for (let i = 0; i < projectsList.length; i += 1) {
   // Clone the project card template
-  let projectCard = projectCardTemplate.content.cloneNode(true);
+  const projectCard = projectCardTemplate.content.cloneNode(true);
 
   // Fill in the details for the project
-  let project = projectsList[i];
+  const project = projectsList[i];
   projectCard.querySelector('h3').textContent = project.name;
   projectCard.querySelectorAll('.tag').forEach((tag, index) => {
     tag.textContent = project.technologies[index];
@@ -114,25 +114,25 @@ for (let i = 0; i < projectsList.length; i += 1) {
   projectsContainer.appendChild(projectCard);
 }
 
-//#region Modal Pop Up
-let modalPopUp = document.getElementsByClassName('modalcontainer')[0];
-let overlayBg = document.getElementById('overlay');
-let liveL = document.getElementById('see-live');
-let sourceL = document.getElementById('see-source');
-let bgImage = document.getElementsByClassName('modal-featured-image')[0];
+// #region Modal Pop Up
+const modalPopUp = document.getElementsByClassName('modalcontainer')[0];
+const overlayBg = document.getElementById('overlay');
+const liveL = document.getElementById('see-live');
+const sourceL = document.getElementById('see-source');
+const bgImage = document.getElementsByClassName('modal-featured-image')[0];
 let currentScrollPosition = window.scrollY;
 
 function ShowModal(index) {
 
-  //Declare Variables
-  let project = projectsList[index];
+  // Declare Variables
+  const project = projectsList[index];
   currentScrollPosition = window.scrollY;
 
-  //toggle pop up activation
+  // toggle pop up activation
   modalPopUp.classList.toggle('active');
   overlayBg.classList.toggle('active');
 
-  //scroll all the way to the pop up
+  // scroll all the way to the pop up
   window.scrollTo(0, 0);
 
   modalPopUp.querySelector('h3').textContent = project.name;
@@ -149,4 +149,4 @@ function HideModal() {
   overlayBg.classList.toggle('active');
   scrollTo(0, currentScrollPosition);
 }
-//#endregion
+// #endregion
