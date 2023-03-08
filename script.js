@@ -144,3 +144,8 @@ function ShowModal(index) {
   sourceL.setAttribute('onclick', `window.location.href='${project.sourcelink}'`);
 }
 //#endregion
+function HideModal() {
+  modalPopUp.classList.toggle('active');
+  overlayBg.classList.toggle('active');
+  scrollTo(0, currentScrollPosition);
+}
