@@ -116,7 +116,7 @@ const projectCardTemplate = document.getElementById('cardtemplate');
 const projectsContainer = document.querySelector('.works');
 
 // Loop through the projectsList array and generate the HTML for each project
-for (let i = 0; i < projectsList.length; i += 1) {
+for (let k = 0; k < projectsList.length; k += 1) {
   // Clone the project card template
   const projectCard = projectCardTemplate.content.cloneNode(true);
 
