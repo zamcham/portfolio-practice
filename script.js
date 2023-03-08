@@ -9,7 +9,7 @@ const toggleActiveClass = () => {
   dimBackground.classList.toggle('active');
   toggleButton.classList.toggle('active');
   exitMobileButton.classList.toggle('active');
-}
+};
 
 toggleButton.addEventListener('click', toggleActiveClass);
 exitMobileButton.addEventListener('click', toggleActiveClass);
@@ -135,9 +135,9 @@ for (let i = 0; i < projectsList.length; i += 1) {
   });
 
   const tags = projectCard.querySelectorAll('.tag');
-  const technologies = project.technologies;
+  const [technologies] = project.technologies;
 
-  for (let i = 0; i < tags.length; i++) {
+  for (let i = 0; i < tags.length; i += 1) {
     tags[i].textContent = technologies[i];
   }
 
