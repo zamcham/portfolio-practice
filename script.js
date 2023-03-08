@@ -125,15 +125,11 @@ for (let i = 0; i < projectsList.length; i += 1) {
   projectCard.querySelector('h3').textContent = project.name;
   projectCard.querySelector('.button').textContent = 'See Project';
   projectCard.querySelector('.button').addEventListener('click', () => {
-    ShowModal(i);
+    
   });
-
-  const tags = projectCard.querySelectorAll('.tag');
-  const [technologies] = project.technologies;
-
-  for (let i = 0; i < tags.length; i += 1) {
-    tags[i].textContent = technologies[i];
-  }
+  projectCard.querySelectorAll('.tag').forEach((tag, index) => {
+    tag.textContent = project.technologies[index];
+  });
 
   // Insert the project card into the projects container
   projectsContainer.appendChild(projectCard);
