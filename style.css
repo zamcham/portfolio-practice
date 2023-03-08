@@ -196,6 +196,12 @@ nav {
   column-gap: 24px;
 }
 
+.tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .tag {
   font-size: 12px;
   font-weight: 600;
@@ -204,6 +210,8 @@ nav {
   background-color: #ebf0ee;
   padding: 8px 12px;
   border-radius: 5px;
+  width: fit-content;
+  margin: 0 8px;
 }
 
 .works .tag {
