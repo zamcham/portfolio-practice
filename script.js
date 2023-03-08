@@ -1,3 +1,4 @@
+// #region Mobile Menu
 const toggleButton = document.getElementsByClassName('toggle-button')[0];
 const navBarLinks = document.getElementsByClassName('menu-links')[0];
 const dimBackground = document.getElementsByClassName('dim-background')[0];
@@ -26,6 +27,7 @@ for (let i = 0; i < menuTabs.length; i += 1) {
     exitMobileButton.classList.toggle('active');
   });
 }
+// #endregion
 
 // #region projects data
 const projectsList = [
@@ -106,12 +108,14 @@ function ShowModal(index) {
   window.scrollTo(0, 0);
 
   modalPopUp.querySelector('h3').textContent = project.name;
-  modalPopUp.querySelectorAll('.tag').forEach((tag, index) => {
-    tag.textContent = project.technologies[index];
-  });
   modalPopUp.querySelector('p').textContent = project.description;
   liveL.setAttribute('onclick', `window.location.href='${project.livelink}'`);
   sourceL.setAttribute('onclick', `window.location.href='${project.sourcelink}'`);
+
+  const tags = modalPopUp.querySelectorAll('.tag');
+  for (let i = 0; i < tags.length; i += 1) {
+    tags[i].textContent = project.technologies[i];
+  }
 }
 // #endregion
 
