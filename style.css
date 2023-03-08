@@ -346,12 +346,6 @@ nav {
   margin: 0;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
 .aboutcard .tags {
   justify-content: center;
 }
@@ -602,6 +596,12 @@ textarea:focus {
     display: flex;
     border-radius: 5px;
     overflow-y: scroll;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   .modalcontainer .tags {
