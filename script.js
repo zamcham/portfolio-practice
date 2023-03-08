@@ -17,16 +17,6 @@ exitMobileButton.addEventListener('click', toggleActiveClass);
 for (let i = 0; i < menuTabs.length; i += 1) {
   menuTabs[i].addEventListener('click', toggleActiveClass);
 }
-
-// Adds a listener to the links in the menu
-for (let i = 0; i < menuTabs.length; i += 1) {
-  menuTabs[i].addEventListener('click', () => {
-    navBarLinks.classList.toggle('active');
-    dimBackground.classList.toggle('active');
-    toggleButton.classList.toggle('active');
-    exitMobileButton.classList.toggle('active');
-  });
-}
 // #endregion
 
 // #region projects data
