@@ -267,7 +267,6 @@ nav {
 .modal-featured-image {
   width: auto;
   height: 220px;
-  background-image: url(./Images/mobileprojectpreview.svg);
   background-size: cover;
   border-radius: 15px;
 }
@@ -637,7 +636,6 @@ textarea:focus {
   .modal-featured-image {
     width: auto;
     height: 615px;
-    background-image: url(./Images/desktopSnapshot.svg);
     background-size: cover;
     border-radius: 15px;
   }
