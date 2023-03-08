@@ -569,7 +569,7 @@ textarea:focus {
   .modalcontainer .tag {
     margin: 0 0.5rem;
   }
-  
+
   .works .tag:hover {
     color: #182a4d;
     transform: scale(1.15, 1.15);
