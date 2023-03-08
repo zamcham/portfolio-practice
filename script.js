@@ -77,3 +77,34 @@ const projectsList = [
   },
 ];
 // #endregion
+
+// #region Modal Pop Up
+const modalPopUp = document.getElementsByClassName('modalcontainer')[0];
+const overlayBg = document.getElementById('overlay');
+const liveL = document.getElementById('see-live');
+const sourceL = document.getElementById('see-source');
+let currentScrollPosition = window.scrollY;
+
+function ShowModal(index) {
+  // Declare Variables
+  const project = projectsList[index];
+  currentScrollPosition = window.scrollY;
+
+  // toggle pop up activation
+  modalPopUp.classList.toggle('active');
+  overlayBg.classList.toggle('active');
+
+  // scroll all the way to the pop up
+  window.scrollTo(0, 0);
+
+  modalPopUp.querySelector('h3').textContent = project.name;
+  modalPopUp.querySelector('p').textContent = project.description;
+  liveL.setAttribute('onclick', `window.location.href='${project.livelink}'`);
+  sourceL.setAttribute('onclick', `window.location.href='${project.sourcelink}'`);
+
+  const tags = modalPopUp.querySelectorAll('.tag');
+  for (let i = 0; i < tags.length; i += 1) {
+    tags[i].textContent = project.technologies[i];
+  }
+}
+// #endregion
