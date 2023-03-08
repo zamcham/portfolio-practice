@@ -260,7 +260,7 @@ nav {
   margin: 1rem 0;
 }
 
-.modalcontainer .tag{
+.modalcontainer .tag {
   margin: 0 0.5rem;
 }
 
@@ -275,7 +275,7 @@ nav {
 .exit-modal {
   position: absolute;
   right: 2rem;
-  top: 2rem
+  top: 2rem;
 }
 
 #exit-modal-button {
@@ -309,7 +309,7 @@ nav {
 .modal-title h3 {
   font-size: 3.2rem;
   color: #172b4d;
-  width:80%;
+  width: 80%;
   margin: 1rem 0;
 }
 
@@ -608,8 +608,8 @@ textarea:focus {
     justify-content: flex-start;
     margin: 1rem 0;
   }
-  
-  .modalcontainer .tag{
+
+  .modalcontainer .tag {
     margin: 0 0.5rem;
   }
 
