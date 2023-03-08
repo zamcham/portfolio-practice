@@ -88,6 +88,36 @@ const projectsList = [
 ];
 // #endregion
 
+// #region Modal Pop Up
+const modalPopUp = document.getElementsByClassName('modalcontainer')[0];
+const overlayBg = document.getElementById('overlay');
+const liveL = document.getElementById('see-live');
+const sourceL = document.getElementById('see-source');
+const bgImage = document.getElementsByClassName('modal-featured-image')[0];
+let currentScrollPosition = window.scrollY;
+
+function ShowModal(index) {
+  // Declare Variables
+  const project = projectsList[index];
+  currentScrollPosition = window.scrollY;
+
+  // toggle pop up activation
+  modalPopUp.classList.toggle('active');
+  overlayBg.classList.toggle('active');
+
+  // scroll all the way to the pop up
+  window.scrollTo(0, 0);
+
+  modalPopUp.querySelector('h3').textContent = project.name;
+  modalPopUp.querySelectorAll('.tag').forEach((tag, index) => {
+    tag.textContent = project.technologies[index];
+  });
+  modalPopUp.querySelector('p').textContent = project.description;
+  liveL.setAttribute('onclick', `window.location.href='${project.livelink}'`);
+  sourceL.setAttribute('onclick', `window.location.href='${project.sourcelink}'`);
+}
+// #endregion
+
 // Get the project card template from the DOM
 const projectCardTemplate = document.getElementById('cardtemplate');
 
@@ -114,39 +144,8 @@ for (let i = 0; i < projectsList.length; i += 1) {
   projectsContainer.appendChild(projectCard);
 }
 
-// #region Modal Pop Up
-const modalPopUp = document.getElementsByClassName('modalcontainer')[0];
-const overlayBg = document.getElementById('overlay');
-const liveL = document.getElementById('see-live');
-const sourceL = document.getElementById('see-source');
-const bgImage = document.getElementsByClassName('modal-featured-image')[0];
-let currentScrollPosition = window.scrollY;
-
-function ShowModal(index) {
-
-  // Declare Variables
-  const project = projectsList[index];
-  currentScrollPosition = window.scrollY;
-
-  // toggle pop up activation
-  modalPopUp.classList.toggle('active');
-  overlayBg.classList.toggle('active');
-
-  // scroll all the way to the pop up
-  window.scrollTo(0, 0);
-
-  modalPopUp.querySelector('h3').textContent = project.name;
-  modalPopUp.querySelectorAll('.tag').forEach((tag, index) => {
-    tag.textContent = project.technologies[index];
-  });
-  modalPopUp.querySelector('p').textContent = project.description;
-  liveL.setAttribute('onclick', `window.location.href='${project.livelink}'`);
-  sourceL.setAttribute('onclick', `window.location.href='${project.sourcelink}'`);
-}
-
-function HideModal() {
+function HideModal() { // eslint-disable-line no-unused-vars
   modalPopUp.classList.toggle('active');
   overlayBg.classList.toggle('active');
   scrollTo(0, currentScrollPosition);
 }
-// #endregion
