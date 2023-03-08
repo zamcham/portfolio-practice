@@ -130,7 +130,6 @@ for (let i = 0; i < projectsList.length; i += 1) {
   projectCard.querySelectorAll('.tag').forEach((tag, index) => {
     tag.textContent = project.technologies[index];
   });
-  
   // Insert the project card into the projects container
   projectsContainer.appendChild(projectCard);
 }
