@@ -566,6 +566,10 @@ textarea:focus {
     transition: 0.5s;
   }
 
+  .modalcontainer .tag {
+    margin: 0 0.5rem;
+  }
+  
   .works .tag:hover {
     color: #182a4d;
     transform: scale(1.15, 1.15);
@@ -607,10 +611,6 @@ textarea:focus {
   .modalcontainer .tags {
     justify-content: flex-start;
     margin: 1rem 0;
-  }
-
-  .modalcontainer .tag {
-    margin: 0 0.5rem;
   }
 
   .exit-modal {
