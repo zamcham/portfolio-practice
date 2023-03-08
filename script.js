@@ -4,20 +4,18 @@ const dimBackground = document.getElementsByClassName('dim-background')[0];
 const exitMobileButton = document.getElementsByClassName('exit-mobile-menu')[0];
 const menuTabs = document.getElementsByClassName('menutabs');
 
-toggleButton.addEventListener('click', () => {
+const toggleActiveClass = () => {
   navBarLinks.classList.toggle('active');
   dimBackground.classList.toggle('active');
   toggleButton.classList.toggle('active');
   exitMobileButton.classList.toggle('active');
-});
+}
 
-// if it's activated
-exitMobileButton.addEventListener('click', () => {
-  navBarLinks.classList.toggle('active');
-  dimBackground.classList.toggle('active');
-  toggleButton.classList.toggle('active');
-  exitMobileButton.classList.toggle('active');
-});
+toggleButton.addEventListener('click', toggleActiveClass);
+exitMobileButton.addEventListener('click', toggleActiveClass);
+for (let i = 0; i < menuTabs.length; i += 1) {
+  menuTabs[i].addEventListener('click', toggleActiveClass);
+}
 
 // Adds a listener to the links in the menu
 for (let i = 0; i < menuTabs.length; i += 1) {
@@ -131,13 +129,17 @@ for (let i = 0; i < projectsList.length; i += 1) {
   // Fill in the details for the project
   const project = projectsList[i];
   projectCard.querySelector('h3').textContent = project.name;
-  projectCard.querySelectorAll('.tag').forEach((tag, index) => {
-    tag.textContent = project.technologies[index];
-  });
   projectCard.querySelector('.button').textContent = 'See Project';
   projectCard.querySelector('.button').addEventListener('click', () => {
     ShowModal(i);
   });
+
+  const tags = projectCard.querySelectorAll('.tag');
+  const technologies = project.technologies;
+
+  for (let i = 0; i < tags.length; i++) {
+    tags[i].textContent = technologies[i];
+  }
 
   // Insert the project card into the projects container
   projectsContainer.appendChild(projectCard);
