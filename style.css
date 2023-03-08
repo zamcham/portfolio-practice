@@ -648,13 +648,13 @@ textarea:focus {
     align-items: center;
     margin: 2rem 0;
   }
-  
+
   .modal-links {
     position: relative;
     display: flex;
     justify-content: flex-end;
   }
-  
+
   .modal-links button {
     cursor: pointer;
     background-color: #36b37f;
@@ -666,14 +666,14 @@ textarea:focus {
     border-radius: 5px;
     margin: 0 0.75rem;
   }
-  
+
   .modal-title h3 {
     font-size: 3.2rem;
     color: #172b4d;
     width: 75%;
     margin: 1rem 0;
   }
-  
+
   .modal-description {
     margin: 1rem 0;
     font-size: 1.6rem;
