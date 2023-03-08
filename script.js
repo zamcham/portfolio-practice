@@ -11,6 +11,7 @@ toggleButton.addEventListener('click', () => {
   exitMobileButton.classList.toggle('active');
 });
 
+//if it's activated
 exitMobileButton.addEventListener('click', () => {
   navBarLinks.classList.toggle('active');
   dimBackground.classList.toggle('active');
@@ -34,9 +35,9 @@ let projectsList = [
     name: 'My First Project in List',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    feturedImageMobile: 'cardplaceholder.png',
-    feauturedImageDesktop: 'cardplaceholder.png',
-    livelink: '#',
+    feturedImageMobile: 'mobilepeojectpreview.jpg',
+    feauturedImageDesktop: 'desktopSnapshot.svg',
+    livelink: 'https://www.google.com/',
     sourcelink: '#'
   },
   {
@@ -105,10 +106,41 @@ for (let i = 0; i < projectsList.length; i += 1) {
     tag.textContent = project.technologies[index];
   });
   projectCard.querySelector('.button').textContent = 'See Project';
-  projectCard.querySelector('.button').onclick = () => {
-    window.location.href = project.sourcelink;
-  };
+  projectCard.querySelector('.button').addEventListener('click', () => {
+    ShowModal(i);
+  });
 
   // Insert the project card into the projects container
   projectsContainer.appendChild(projectCard);
 }
+
+//#region Modal Pop Up
+let modalPopUp = document.getElementsByClassName('modalcontainer')[0];
+let overlayBg = document.getElementById('overlay');
+let liveL = document.getElementById('see-live');
+let sourceL = document.getElementById('see-source');
+let bgImage = document.getElementsByClassName('modal-featured-image')[0];
+let currentScrollPosition = window.scrollY;
+
+function ShowModal(index) {
+
+  //Declare Variables
+  let project = projectsList[index];
+  currentScrollPosition = window.scrollY;
+
+  //toggle pop up activation
+  modalPopUp.classList.toggle('active');
+  overlayBg.classList.toggle('active');
+
+  //scroll all the way to the pop up
+  window.scrollTo(0, 0);
+
+  modalPopUp.querySelector('h3').textContent = project.name;
+  modalPopUp.querySelectorAll('.tag').forEach((tag, index) => {
+    tag.textContent = project.technologies[index];
+  });
+  modalPopUp.querySelector('p').textContent = project.description;
+  liveL.setAttribute('onclick', `window.location.href='${project.livelink}'`);
+  sourceL.setAttribute('onclick', `window.location.href='${project.sourcelink}'`);
+}
+//#endregion
