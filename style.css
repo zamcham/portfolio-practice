@@ -269,6 +269,7 @@ nav {
   height: 220px;
   background-size: cover;
   border-radius: 15px;
+  background-image: url("./Images/mobile_modal_image.jpg");
 }
 
 .exit-modal {
@@ -638,6 +639,7 @@ textarea:focus {
     height: 615px;
     background-size: cover;
     border-radius: 15px;
+    background-image: url("./Images/desktop_modal_snap.jpg");
   }
 
   .modal-info-container {
