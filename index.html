@@ -68,6 +68,7 @@
         </div>
 
     </section>
+    <!-- Works Section-->
     <section class="workscontainer">
         <div class="container">
             <h2>My Recent Works</h2>
@@ -75,118 +76,58 @@
         <div>
             <hr class="roundeddivider">
         </div>
+        <!-- Works Cards Container -->
         <div class="works">
-            <div class="workscard">
-                <div class="card">
-                    <div class="cardinfo">
-                        <h3>Multi-Post Stories<br>Gain + Glory</h3>
-                    </div>
-                    <div class="cardinfo">
-                        <ul class="tags">
-                            <li class="tag">Ruby on rails</li>
-                            <li class="tag">css</li>
-                            <li class="tag">JavaScript</li>
-                            <li class="tag">html</li>
-                        </ul>
-                    </div>
-                    <div class="cardinfo">
-                        <button class="button" onclick="window.location.href='https://github.com/zam-cham';">See Project</button>
-                    </div>
-                </div>
-            </div>
-            <div class="workscard">
-                <div class="card">
-                    <div class="cardinfo">
-                        <h3>Multi-Post Stories<br>Gain + Glory</h3>
-                    </div>
-                    <div class="cardinfo">
-                        <ul class="tags">
-                            <li class="tag">Ruby on rails</li>
-                            <li class="tag">css</li>
-                            <li class="tag">JavaScript</li>
-                            <li class="tag">html</li>
-                        </ul>
-                    </div>
-                    <div class="cardinfo">
-                        <button class="button" onclick="window.location.href='https://github.com/zam-cham';">See Project</button>
+            <!-- Template Works Card Container -->
+            <template id="cardtemplate">
+                <div class="workscard">
+                    <div class="card">
+                        <div class="cardinfo">
+                            <h3></h3>
+                        </div>
+                        <div class="cardinfo">
+                            <ul class="tags">
+                                <li class="tag"></li>
+                                <li class="tag"></li>
+                                <li class="tag"></li>
+                                <li class="tag"></li>
+                            </ul>
+                        </div>
+                        <div class="cardinfo">
+                            <button class="button">See Project</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="workscard">
-                <div class="card">
-                    <div class="cardinfo">
-                        <h3>Multi-Post Stories<br>Gain + Glory</h3>
-                    </div>
-                    <div class="cardinfo">
-                        <ul class="tags">
-                            <li class="tag">Ruby on rails</li>
-                            <li class="tag">css</li>
-                            <li class="tag">JavaScript</li>
-                            <li class="tag">html</li>
-                        </ul>
-                    </div>
-                    <div class="cardinfo">
-                        <button class="button" onclick="window.location.href='https://github.com/zam-cham';">See Project</button>
-                    </div>
-                </div>
-            </div>
-            <div class="workscard">
-                <div class="card">
-                    <div class="cardinfo">
-                        <h3>Multi-Post Stories<br>Gain + Glory</h3>
-                    </div>
-                    <div class="cardinfo">
-                        <ul class="tags">
-                            <li class="tag">Ruby on rails</li>
-                            <li class="tag">css</li>
-                            <li class="tag">JavaScript</li>
-                            <li class="tag">html</li>
-                        </ul>
-                    </div>
-                    <div class="cardinfo">
-                        <button class="button">See Project</button>
-                    </div>
-                </div>
-            </div>
-            <div class="workscard">
-                <div class="card">
-                    <div class="cardinfo">
-                        <h3>Multi-Post Stories<br>Gain + Glory</h3>
-                    </div>
-                    <div class="cardinfo">
-                        <ul class="tags">
-                            <li class="tag">Ruby on rails</li>
-                            <li class="tag">css</li>
-                            <li class="tag">JavaScript</li>
-                            <li class="tag">html</li>
-                        </ul>
-                    </div>
-                    <div class="cardinfo">
-                        <button class="button" onclick="window.location.href='https://github.com/zam-cham';">See Project</button>
-                    </div>
-                </div>
-            </div>
-            <div class="workscard">
-                <div class="card">
-                    <div class="cardinfo">
-                        <h3>Multi-Post Stories<br>Gain + Glory</h3>
-                    </div>
-                    <div class="cardinfo">
-                        <ul class="tags">
-                            <li class="tag">Ruby on rails</li>
-                            <li class="tag">css</li>
-                            <li class="tag">JavaScript</li>
-                            <li class="tag">html</li>
-                        </ul>
-                    </div>
-                    <div class="cardinfo">
-                        <button class="button">See Project</button>
-                    </div>
-                </div>
-            </div>
+             </template>
         </div>
-
+        <!-- Template Pop Up Container -->
+            <div class="modalcontainer">
+                <div class="exit-modal">
+                    <button id="exit-modal-button" onclick="HideModal()">&times;</button>
+                </div>
+                <div class="modal-featured-image">
+                </div>
+                <div class="modal-info-container">
+                    <div class="modal-title">
+                        <h3>Keeping Track of hundreds of components</h3>
+                    </div>
+                    <div class="modal-links">
+                        <button id="see-live">See Live<img src="./icons/socialmedia/white_icon_live.svg" class="modal-icons"></button>
+                        <button id="see-source">See Source<img src="./icons/socialmedia/white_icon_gh.svg" class="modal-icons"></button>
+                    </div>
+                </div>
+                <ul class="tags">
+                    <li class="tag">Ruby On Rails</li>
+                    <li class="tag">Css</li>
+                    <li class="tag">JavaScript</li>
+                    <li class="tag">html</li>
+                </ul>
+                <p class="modal-description">
+                </p>
+            </div>
+            <div id="overlay"></div>
     </section>
+    <!-- About Me Section-->
     <section class="aboutme">
         <div class="about">
             <div class="container">
@@ -254,6 +195,7 @@
             </div>
         </div>
     </section>
+    <!-- Contact Section-->
     <section class="contactsection">
         <div class="contact">
             <div class="container">
