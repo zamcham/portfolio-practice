@@ -121,11 +121,11 @@ for (let k = 0; k < projectsList.length; k += 1) {
   const projectCard = projectCardTemplate.content.cloneNode(true);
 
   // Fill in the details for the project
-  const project = projectsList[i];
+  const project = projectsList[k];
   projectCard.querySelector('h3').textContent = project.name;
   projectCard.querySelector('.button').textContent = 'See Project';
   projectCard.querySelector('.button').addEventListener('click', () => {
-    ShowModal(i);
+    ShowModal(k);
   });
   projectCard.querySelectorAll('.tag').forEach((tag, index) => {
     tag.textContent = project.technologies[index];
