@@ -155,17 +155,15 @@ const validateInputs = () => {
   if (!(emailSubmission === emailSubmission.toLowerCase())) {
     setError('Your email needs to be lowercase');
     emailField.classList.toggle('activeerror');
-  }
-  else if (emailSubmission === '') {
+  } else if (emailSubmission === '') {
     setError('Your email can not be empty');
     emailField.classList.toggle('activeerror');
-  }
-  else {
+  } else {
     setError('');
     emailField.classList.toggle('activeerror');
     form.submit();
-  };
-}
+  }
+};
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
