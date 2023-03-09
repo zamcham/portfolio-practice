@@ -170,3 +170,20 @@ form.addEventListener('submit', (e) => {
   validateInputs();
 });
 // #endregion
+
+//Get All input fields and text area in the doc
+const inputFields = document.querySelectorAll('input, textarea');
+
+// Loop through each input field and add an "input" event listener
+inputFields.forEach(input => {
+  input.addEventListener('input', event => {
+    // Get the updated value of the input field
+    const updatedValue = event.target.value;
+    
+    // Get the key name for the local storage item (use the input field's name attribute)
+    const keyName = event.target.name;
+    
+    // Save the updated value to local storage
+    localStorage.setItem(keyName, updatedValue);
+  });
+});
