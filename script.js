@@ -169,3 +169,8 @@ const setError = (message) => {
   errorContainer.classList.add('error');
 }
 
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  validateInputs();
+});
+// #endregion
