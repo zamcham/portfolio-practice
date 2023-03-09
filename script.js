@@ -147,14 +147,15 @@ const setError = (message) => {
   const errorContainer = form.querySelector('.error');
   errorContainer.innerHTML = message;
   errorContainer.classList.add('error');
-}
+};
 
 const validateInputs = () => {
   const emailSubmission = emailField.value;
 
   if (!(emailSubmission === emailSubmission.toLowerCase())) {
     setError('Your email needs to be lowercase');
-    emailField.classList.toggle('activeerror'); }
+    emailField.classList.toggle('activeerror');
+  }
   else if (emailSubmission === '') {
     setError('Your email can not be empty');
     emailField.classList.toggle('activeerror');
@@ -163,10 +164,10 @@ const validateInputs = () => {
     setError('');
     emailField.classList.toggle('activeerror');
     form.submit();
-  }
+  };
 }
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   validateInputs();
 });
