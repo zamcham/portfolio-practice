@@ -139,3 +139,34 @@ function HideModal() { // eslint-disable-line no-unused-vars
   overlayBg.classList.toggle('active');
   window.scrollTo(0, currentScrollPosition);
 }
+
+// #region
+const form = document.getElementsByClassName('contact-form')[0];
+const emailField = document.getElementById('email');
+const setError = (message) => {
+  const errorContainer = form.querySelector('.error');
+  errorContainer.innerHTML = message;
+  errorContainer.classList.add('error');
+};
+
+const validateInputs = () => {
+  const emailSubmission = emailField.value;
+
+  if (!(emailSubmission === emailSubmission.toLowerCase())) {
+    setError('Your email needs to be lowercase');
+    emailField.classList.toggle('activeerror');
+  } else if (emailSubmission === '') {
+    setError('Your email can not be empty');
+    emailField.classList.toggle('activeerror');
+  } else {
+    setError('');
+    emailField.classList.toggle('activeerror');
+    form.submit();
+  }
+};
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  validateInputs();
+});
+// #endregion
