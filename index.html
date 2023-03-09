@@ -202,11 +202,12 @@
                 <h2 id="contactformtext">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
             </div>
             <div class="container" id="contactform">
-                <form action="https://formspree.io/f/xnqydbrv" method="POST">
+                <form class="contact-form" action="https://formspree.io/f/xnqydbrv" method="POST">
                     <input type="text" id="name" name="name" placeholder="Full name" maxlength="30" required><br>
-                    <input type="email" id="email" name="email" placeholder="Email address" required><br>
+                    <input type="email" id="email" name="email" placeholder="Email address"><br>
                     <textarea id="comments" name="comment" rows="9" placeholder="Enter text here" maxlength="500" required></textarea><br>               
-                    <input class="button" id="formbutton" type="submit" value="Get in touch">
+                    <span class="error"></span><br>
+                    <button class="button" id="formbutton" type="submit">Get in touch</button>
                 </form>
             </div>
         </div>
