@@ -162,3 +162,10 @@ const validateInputs = () => {
     form.submit();
   }
 }
+
+const setError = (message) => {
+  const errorContainer = form.querySelector('.error');
+  errorContainer.innerHTML = message;
+  errorContainer.classList.add('error');
+}
+
