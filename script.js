@@ -173,8 +173,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Loop through each input field and text area in the form
     form.querySelectorAll('input, textarea').forEach((input) => {
       // Get the name of the input field
-      const name = input.name;
-      // If the saved form data object has value for the input name, set input field's value to that value
+      const [name] = input.name;
+      // If saved form data object has value for input name, set input value to that value
       if (savedFormData[name]) {
         input.value = savedFormData[name];
       }
