@@ -190,10 +190,11 @@ inputFields.forEach(input => {
 // Add an event listener for the "DOMContentLoaded" event
 document.addEventListener('DOMContentLoaded', event => {
   // Loop through each input and textarea field
-  inputFields.forEach(input) => {
+  inputFields.forEach(input => {
     // Get the key name for the local storage item (use the input field's name attribute)
     const keyName = input.name;
-//Get the saved value from local storage (if it exists)
+    
+    // Get the saved value from local storage (if it exists)
     const savedValue = localStorage.getItem(keyName);
     
     // If a saved value exists, set the value of the input or textarea field to the saved value
