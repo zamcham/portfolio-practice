@@ -170,33 +170,28 @@ form.addEventListener('submit', (e) => {
   validateInputs();
 });
 // #endregion
-//Get All input fields and text area in the doc 
+// Get All input fields and text area in the doc
 const inputFields = document.querySelectorAll('input, textarea');
-
 // Loop through each input field and add an "input" event listener
-inputFields.forEach(input => {
-  input.addEventListener('input', event => {
+inputFields.forEach((input) => {
+  input.addEventListener('input', (event) => {
     // Get the updated value of the input field
     const updatedValue = event.target.value;
-    
     // Get the key name for the local storage item (use the input field's name attribute)
     const keyName = event.target.name;
-    
     // Save the updated value to local storage
     localStorage.setItem(keyName, updatedValue);
   });
 });
 
 // Add an event listener for the "DOMContentLoaded" event
-document.addEventListener('DOMContentLoaded', event => {
+document.addEventListener('DOMContentLoaded', () => {
   // Loop through each input and textarea field
-  inputFields.forEach(input => {
+  inputFields.forEach((input) => {
     // Get the key name for the local storage item (use the input field's name attribute)
     const keyName = input.name;
-    
     // Get the saved value from local storage (if it exists)
     const savedValue = localStorage.getItem(keyName);
-    
     // If a saved value exists, set the value of the input or textarea field to the saved value
     if (savedValue) {
       input.value = savedValue;
