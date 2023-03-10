@@ -154,8 +154,8 @@ form.addEventListener('submit', (event) => {
   // Loop through each input field and text area in the form
   form.querySelectorAll('input, textarea').forEach((input) => {
     // Get the name and value of the input field
-    const name = input.name;
-    const value = input.value;
+    const [name] = input.name;
+    const [value] = input.value;
     // Add the name and value to the form data object
     formData[name] = value;
   });
@@ -172,9 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (savedFormData) {
     // Loop through each input field and text area in the form
     form.querySelectorAll('input, textarea').forEach((input) => {
-    // Get the name of the input field
-    const name = input.name;
-    // If the saved form data object has a value for the input field's name, set the input field's value to that value
+      // Get the name of the input field
+      const name = input.name;
+      // If the saved form data object has value for the input name, set input field's value to that value
       if (savedFormData[name]) {
         input.value = savedFormData[name];
       }
