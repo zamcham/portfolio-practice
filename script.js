@@ -174,7 +174,7 @@ form.addEventListener('submit', (e) => {
 const inputFields = document.querySelectorAll('input, textarea');
 
 // Loop through each input field and add an "input" event listener
-inputFields.forEach(input) => {
+inputFields.forEach input => {
   input.addEventListener('input', event) => {
     //Get the updated value of the input field
     const updatedValue = event.target.value;
