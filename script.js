@@ -146,22 +146,22 @@ const form = document.querySelector('form');
 
 // Add an "submit" event listener to the form element
 form.addEventListener('submit', (event) => {
-// Prevent the default form submission behavior
-event.preventDefault();
-// Create an object to store the form data
-const formData = {};
+  // Prevent the default form submission behavior
+  event.preventDefault();
+  // Create an object to store the form data
+  const formData = {};
 
-// Loop through each input field and text area in the form
-form.querySelectorAll('input, textarea').forEach((input) => {
-// Get the name and value of the input field
-const name = input.name;
-const value = input.value;
-// Add the name and value to the form data object
-formData[name] = value;
-});
+  // Loop through each input field and text area in the form
+  form.querySelectorAll('input, textarea').forEach((input) => {
+    // Get the name and value of the input field
+    const name = input.name;
+    const value = input.value;
+    // Add the name and value to the form data object
+    formData[name] = value;
+  });
 
-// Save the form data object to local storage
-localStorage.setItem('formData', JSON.stringify(formData));
+  // Save the form data object to local storage
+  localStorage.setItem('formData', JSON.stringify(formData));
 });
 
 // Add an event listener for the "DOMContentLoaded" event
