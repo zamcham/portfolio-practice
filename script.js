@@ -141,60 +141,43 @@ function HideModal() { // eslint-disable-line no-unused-vars
 }
 
 // #region
-const form = document.getElementsByClassName('contact-form')[0];
-const emailField = document.getElementById('email');
-const setError = (message) => {
-  const errorContainer = form.querySelector('.error');
-  errorContainer.innerHTML = message;
-  errorContainer.classList.add('error');
-};
+// Get the form element from the doc
+const form = document.querySelector('form');
 
-const validateInputs = () => {
-  const emailSubmission = emailField.value;
+// Add an "submit" event listener to the form element
+form.addEventListener('submit', (event) => {
+// Prevent the default form submission behavior
+event.preventDefault();
+// Create an object to store the form data
+const formData = {};
 
-  if (!(emailSubmission === emailSubmission.toLowerCase())) {
-    setError('Your email needs to be lowercase');
-    emailField.classList.toggle('activeerror');
-  } else if (emailSubmission === '') {
-    setError('Your email can not be empty');
-    emailField.classList.toggle('activeerror');
-  } else {
-    setError('');
-    emailField.classList.toggle('activeerror');
-    form.submit();
-  }
-};
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  validateInputs();
+// Loop through each input field and text area in the form
+form.querySelectorAll('input, textarea').forEach((input) => {
+// Get the name and value of the input field
+const name = input.name;
+const value = input.value;
+// Add the name and value to the form data object
+formData[name] = value;
 });
-// #endregion
-// Get All input fields and text area in the doc
-const inputFields = document.querySelectorAll('input, textarea');
-// Loop through each input field and add an "input" event listener
-inputFields.forEach((input) => {
-  input.addEventListener('input', (event) => {
-    // Get the updated value of the input field
-    const updatedValue = event.target.value;
-    // Get the key name for the local storage item (use the input field's name attribute)
-    const keyName = event.target.name;
-    // Save the updated value to local storage
-    localStorage.setItem(keyName, updatedValue);
-  });
+
+// Save the form data object to local storage
+localStorage.setItem('formData', JSON.stringify(formData));
 });
 
 // Add an event listener for the "DOMContentLoaded" event
 document.addEventListener('DOMContentLoaded', () => {
-  // Loop through each input and textarea field
-  inputFields.forEach((input) => {
-    // Get the key name for the local storage item (use the input field's name attribute)
-    const keyName = input.name;
-    // Get the saved value from local storage (if it exists)
-    const savedValue = localStorage.getItem(keyName);
-    // If a saved value exists, set the value of the input or textarea field to the saved value
-    if (savedValue) {
-      input.value = savedValue;
-    }
-  });
+  // Get the saved form data object from local storage (if it exists)
+  const savedFormData = JSON.parse(localStorage.getItem('formData'));
+  // If a saved form data object exists, pre-fill the input fields and text areas
+  if (savedFormData) {
+    // Loop through each input field and text area in the form
+    form.querySelectorAll('input, textarea').forEach((input) => {
+    // Get the name of the input field
+    const name = input.name;
+    // If the saved form data object has a value for the input field's name, set the input field's value to that value
+      if (savedFormData[name]) {
+        input.value = savedFormData[name];
+      }
+    });
+  }
 });
