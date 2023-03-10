@@ -187,3 +187,12 @@ inputFields.forEach(input => {
     localStorage.setItem(keyName, updatedValue);
   });
 });
+
+// Add an event listener for the "DOMContentLoaded" event
+document.addEventListener('DOMContentLoaded', event => {
+  // Loop through each input and textarea field
+  inputFields.forEach(input => {
+    // Get the key name for the local storage item (use the input field's name attribute)
+    const keyName = input.name;
+    
+   });
