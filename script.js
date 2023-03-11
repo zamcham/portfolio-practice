@@ -141,43 +141,67 @@ function HideModal() { // eslint-disable-line no-unused-vars
 }
 
 // #region
-// Get the form element from the doc
-const form = document.querySelector('form');
+const form = document.getElementsByClassName('contact-form')[0];
+const emailField = document.getElementById('email');
+const setError = (message) => {
+  const errorContainer = form.querySelector('.error');
+  errorContainer.innerHTML = message;
+  errorContainer.classList.add('error');
+};
 
-// Add an "submit" event listener to the form element
-form.addEventListener('submit', (event) => {
-  // Prevent the default form submission behavior
-  event.preventDefault();
-  // Create an object to store the form data
-  const formData = {};
+const validateInputs = () => {
+  const emailSubmission = emailField.value;
 
-  // Loop through each input field and text area in the form
-  form.querySelectorAll('input, textarea').forEach((input) => {
-    // Get the name and value of the input field
-    const [name] = input.name;
-    const [value] = input.value;
-    // Add the name and value to the form data object
-    formData[name] = value;
+  if (!(emailSubmission === emailSubmission.toLowerCase())) {
+    setError('Your email needs to be lowercase');
+    emailField.classList.toggle('activeerror');
+  } else if (emailSubmission === '') {
+    setError('Your email can not be empty');
+    emailField.classList.toggle('activeerror');
+  } else {
+    setError('');
+    emailField.classList.toggle('activeerror');
+    form.submit();
+  }
+};
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  validateInputs();
+});
+// #endregion
+
+//Get All input fields and text area in the doc
+const contactForm = document.querySelector('.contact-form');
+const nameInput = contactForm.querySelector('#name');
+const emailInput = contactForm.querySelector('#email');
+const commentsInput = contactForm.querySelector('#comments');
+
+// Define the formData object
+const formData = {
+  name: nameInput.value,
+  email: emailInput.value,
+  comments: commentsInput.value,
+};
+
+// Add an input event listener to each input element
+[nameInput, emailInput, commentsInput].forEach(input => {
+  input.addEventListener('input', () => {
+    // Update the formData object with the new input value
+    formData[input.name] = input.value;
+    // Save the updated formData object to local storage
+    localStorage.setItem('formData', JSON.stringify(formData));
   });
-
-  // Save the form data object to local storage
-  localStorage.setItem('formData', JSON.stringify(formData));
 });
 
-// Add an event listener for the "DOMContentLoaded" event
+// Add an event listener for the DOMContentLoaded event
 document.addEventListener('DOMContentLoaded', () => {
-  // Get the saved form data object from local storage (if it exists)
+  // Load the saved formData object from local storage
   const savedFormData = JSON.parse(localStorage.getItem('formData'));
-  // If a saved form data object exists, pre-fill the input fields and text areas
+  // If savedFormData exists, fill the form with the saved data
   if (savedFormData) {
-    // Loop through each input field and text area in the form
-    form.querySelectorAll('input, textarea').forEach((input) => {
-      // Get the name of the input field
-      const [name] = input.name;
-      // If saved form data object has value for input name, set input value to that value
-      if (savedFormData[name]) {
-        input.value = savedFormData[name];
-      }
-    });
+    nameInput.value = savedFormData.name;
+    emailInput.value = savedFormData.email;
+    commentsInput.value = savedFormData.body;
   }
 });
