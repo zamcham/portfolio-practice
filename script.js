@@ -171,7 +171,7 @@ form.addEventListener('submit', (e) => {
 });
 // #endregion
 
-//Get All input fields and text area in the doc
+// Get All input fields and text area in the doc
 const contactForm = document.querySelector('.contact-form');
 const nameInput = contactForm.querySelector('#name');
 const emailInput = contactForm.querySelector('#email');
@@ -185,7 +185,7 @@ const formData = {
 };
 
 // Add an input event listener to each input element
-[nameInput, emailInput, commentsInput].forEach(input => {
+[nameInput, emailInput, commentsInput].forEach((input) => {
   input.addEventListener('input', () => {
     // Update the formData object with the new input value
     formData[input.name] = input.value;
