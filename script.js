@@ -170,3 +170,38 @@ form.addEventListener('submit', (e) => {
   validateInputs();
 });
 // #endregion
+
+// Get All input fields and text area in the doc
+const contactForm = document.querySelector('.contact-form');
+const nameInput = contactForm.querySelector('#name');
+const emailInput = contactForm.querySelector('#email');
+const commentsInput = contactForm.querySelector('#comments');
+
+// Define the formData object
+const formData = {
+  name: nameInput.value,
+  email: emailInput.value,
+  comments: commentsInput.value,
+};
+
+// Add an input event listener to each input element
+[nameInput, emailInput, commentsInput].forEach((input) => {
+  input.addEventListener('input', () => {
+    // Update the formData object with the new input value
+    formData[input.name] = input.value;
+    // Save the updated formData object to local storage
+    localStorage.setItem('formData', JSON.stringify(formData));
+  });
+});
+
+// Add an event listener for the DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', () => {
+  // Load the saved formData object from local storage
+  const savedFormData = JSON.parse(localStorage.getItem('formData'));
+  // If savedFormData exists, fill the form with the saved data
+  if (savedFormData) {
+    nameInput.value = savedFormData.name;
+    emailInput.value = savedFormData.email;
+    commentsInput.value = savedFormData.body;
+  }
+});
